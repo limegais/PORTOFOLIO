@@ -13,12 +13,16 @@ function Footer() {
   }, []);
 
   return (
-    <footer className="flex w-full shrink-0 flex-col items-center gap-2 border-t border-border px-4 py-6 sm:flex-row md:px-6 sm:justify-between">
-      <p className="text-xs text-gray-500 dark:text-gray-400">
-        {`© ${year} ${config.author}. All rights reserved.`}
-      </p>
-      <SocialMediaButtons />
-      <nav className="flex gap-4 sm:gap-6 z-10">
+    <footer className="flex w-full shrink-0 flex-col items-center gap-4 border-t border-border px-4 py-6 md:px-6">
+      {/* Top row: copyright + social */}
+      <div className="flex flex-col sm:flex-row items-center justify-between w-full gap-3">
+        <p className="text-xs text-gray-500 dark:text-gray-400 text-center sm:text-left">
+          {`© ${year} ${config.author}. All rights reserved.`}
+        </p>
+        <SocialMediaButtons />
+      </div>
+      {/* Bottom row: nav links */}
+      <nav className="flex flex-wrap justify-center gap-2 sm:gap-4 z-10">
         {footer.map((link, index) => {
           const { title, href } = link;
 
@@ -28,7 +32,7 @@ function Footer() {
               href={href}
               key={`l_${index}`}
             >
-              <Button variant="link">{title}</Button>
+              <Button variant="link" className="text-xs h-auto py-1 px-2">{title}</Button>
             </Link>
           );
         })}

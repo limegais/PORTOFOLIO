@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Unbounded } from "next/font/google";
 import "./globals.css";
 import { config } from "@/data/config";
@@ -23,6 +23,12 @@ const unbounded = Unbounded({
   variable: "--font-display",
   display: "swap",
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   // pins every relative/OG url to the .dev origin so nothing canonicalises back to .site

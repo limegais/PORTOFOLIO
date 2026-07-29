@@ -10,7 +10,7 @@ import Image from "next/image";
 const ExperienceSection = () => {
   return (
     <SectionWrapper
-      className="flex flex-col items-center justify-center min-h-[120vh] py-20"
+      className="flex flex-col items-center justify-center min-h-screen md:min-h-[120vh] py-12 md:py-20"
     >
       <div className="w-full max-w-4xl px-4 md:px-8 mx-auto">
         <SectionHeader
@@ -20,8 +20,8 @@ const ExperienceSection = () => {
           className="mb-12 md:mb-20 mt-0"
         />
 
-        <div className="flex flex-col gap-8 md:gap-12 relative">
-          {/* Connector Line - simplified to a subtle border */}
+        <div className="flex flex-col gap-6 md:gap-12 relative">
+          {/* Connector Line - only visible on md+ */}
           <div className="absolute left-8 md:left-1/2 top-4 bottom-4 w-px bg-border hidden md:block -translate-x-1/2" />
 
           {EXPERIENCE.map((exp, index) => (

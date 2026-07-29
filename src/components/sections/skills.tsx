@@ -77,7 +77,7 @@ const SkillsSection = () => {
   return (
     <SectionWrapper
       id="skills"
-      className="w-full h-screen md:h-[150dvh] pointer-events-none"
+      className="w-full h-[40vh] sm:h-[60vh] md:h-screen md:h-[150dvh] pointer-events-none"
     >
       <SectionHeader id="skills" title="Tech Stack" desc="(hint: press a key)" />
     </SectionWrapper>

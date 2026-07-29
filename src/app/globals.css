@@ -4,6 +4,12 @@
 
 body {
   scroll-behavior: smooth;
+  /* Prevent horizontal scrolling on mobile */
+  overflow-x: hidden;
+}
+
+html {
+  overflow-x: hidden;
 }
 
 @layer base {

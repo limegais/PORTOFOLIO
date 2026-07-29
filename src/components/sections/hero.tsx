@@ -27,21 +27,21 @@ const HeroSection = () => {
           className={cn(
             "h-[calc(100dvh-3rem)] md:h-[calc(100dvh-4rem)] z-[2]",
             "col-span-1",
-            "flex flex-col justify-start md:justify-center items-center md:items-start",
-            "pt-28 sm:pb-16 md:p-20 lg:p-24 xl:p-28"
+            "flex flex-col justify-center md:justify-center items-center md:items-start",
+            "px-6 pt-20 pb-16 sm:px-8 sm:pt-24 md:p-20 lg:p-24 xl:p-28"
           )}
         >
           {!isLoading && (
             <div className="flex flex-col">
               <div>
                 <BlurIn delay={0.5}>
-                  <div className="mb-3 self-center md:self-start ml-2 md:ml-6">
+                  <div className="mb-3 self-center md:self-start ml-2 md:ml-6 flex justify-center md:justify-start">
                     <Image
                       src="/assets/profile.png"
                       alt={config.author}
                       width={288}
                       height={288}
-                      className="rounded-full object-cover border-4 border-zinc-700/60 shadow-2xl w-56 h-56 md:w-72 md:h-72"
+                      className="rounded-full object-cover border-4 border-zinc-700/60 shadow-2xl w-44 h-44 sm:w-56 sm:h-56 md:w-72 md:h-72"
                       priority
                     />
                   </div>
@@ -49,12 +49,11 @@ const HeroSection = () => {
                 <BlurIn delay={0.7}>
                   <p
                     className={cn(
-                      "md:self-start mt-4 font-medium text-md text-slate-500 dark:text-zinc-400",
-                      "cursor-default sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                      "md:self-start mt-4 font-medium text-sm text-slate-500 dark:text-zinc-400",
+                      "cursor-default sm:text-lg md:text-xl bg-clip-text"
                     )}
                   >
                     Hi, I am
-                    <br className="md:hidden" />
                   </p>
                 </BlurIn>
 
@@ -63,8 +62,8 @@ const HeroSection = () => {
                     <TooltipTrigger asChild>
                       <h1
                         className={cn(
-                          "-ml-[6px] leading-none text-transparent text-slate-800 text-left",
-                          "font-bold text-6xl md:text-7xl lg:text-7xl xl:text-8xl",
+                          "-ml-[4px] leading-none text-transparent text-slate-800 text-left",
+                          "font-bold text-5xl sm:text-6xl md:text-7xl lg:text-7xl xl:text-8xl",
                           "cursor-default text-edge-outline font-display mt-2"
                         )}
                       >
@@ -83,11 +82,13 @@ const HeroSection = () => {
                 <BlurIn delay={1.2}>
                   <p
                     className={cn(
-                      "md:self-start md:mt-4 font-medium text-md text-slate-500 dark:text-zinc-400",
-                      "cursor-default sm:text-xl md:text-xl whitespace-nowrap bg-clip-text "
+                      "md:self-start mt-3 md:mt-4 font-medium text-sm text-slate-500 dark:text-zinc-400",
+                      "cursor-default sm:text-base md:text-xl bg-clip-text leading-relaxed"
                     )}
                   >
-                    Electrical Engineering Student | IoT & Embedded Systems | Full Stack Developer
+                    Electrical Engineering Student
+                    <span className="hidden sm:inline"> | IoT & Embedded Systems | Full Stack Developer</span>
+                    <span className="block sm:hidden text-xs mt-1">IoT & Embedded Systems | Full Stack Developer</span>
                   </p>
                 </BlurIn>
               </div>
